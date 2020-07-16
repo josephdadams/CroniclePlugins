@@ -3,6 +3,8 @@ Plugins I have created to use with Cronicle (https://github.com/jhuckaby/Cronicl
 
 Create a new plugin in Cronicle and upload each script to the Cronicle server. You can make the scripts directly executable by using `chmod +x plugin.py` and then just specify the path to the file for the plugin to execute.
 
+Read more about how I am using these plugins here: https://techministry.blog/2020/07/16/automating-production-equipment-using-a-chromebox-and-a-scheduling-server/
+
 ## rosstalk.py
 Requires the following parameters:
 * `ip`: Text Field: IP Address of the Ross switcher
