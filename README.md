@@ -1,6 +1,14 @@
 # CroniclePlugins
 Plugins I have created to use with Cronicle (https://github.com/jhuckaby/Cronicle)
 
+Create a new plugin in Cronicle and upload each script to the Cronicle server. You can make the scripts directly executable by using `chmod +x plugin.py` and then just specify the path to the file for the plugin to execute.
+
+## rosstalk.py
+Requires the following parameters:
+* `ip`: Text Field: IP Address of the Ross switcher
+* `port`: Text Field Port of the switcher (default of 7788)
+* `command`: RossTalk command to send (send multiple commands in the same string by separating them with semicolons `;`) For a list of RossTalk commands: http://help.rossvideo.com/carbonite-device/Topics/Protocol/RossTalk/CNT/RT-CNT-Comm.html
+
 ## vicreo_file.py
 Requires the following parameters:
 * `ip`: Text Field: IP Address of the computer running [VICREO Listener](https://jeffreydavidsz.github.io/VICREO-Listener/)
