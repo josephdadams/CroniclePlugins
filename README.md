@@ -6,6 +6,7 @@ Create a new plugin in Cronicle and upload each script to the Cronicle server. Y
 Read more about how I am using these plugins here: https://techministry.blog/2020/07/16/automating-production-equipment-using-a-chromebox-and-a-scheduling-server/
 
 ## companion.py
+Allows buttons in Bitfocus Companion to be pressed remotely.
 Requires the following parameters:
 * `ip`: Text Field: IP address of the device running Bitfocus Companion
 * `port`: Text Field: TCP listening port in Companion (default of 51234)
