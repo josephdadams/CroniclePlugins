@@ -5,10 +5,17 @@ Create a new plugin in Cronicle and upload each script to the Cronicle server. Y
 
 Read more about how I am using these plugins here: https://techministry.blog/2020/07/16/automating-production-equipment-using-a-chromebox-and-a-scheduling-server/
 
+## companion.py
+Requires the following parameters:
+* `ip`: Text Field: IP address of the device running Bitfocus Companion
+* `port`: Text Field: TCP listening port in Companion (default of 51234)
+* `page`: Text Field: Page that the button is on that you want to execute
+* `button`: Text Field: Button number on that page that you want to execute
+
 ## rosstalk.py
 Requires the following parameters:
 * `ip`: Text Field: IP Address of the Ross switcher
-* `port`: Text Field Port of the switcher (default of 7788)
+* `port`: Text Field: Port of the switcher (default of 7788)
 * `command`: RossTalk command to send (send multiple commands in the same string by separating them with semicolons `;`) For a list of RossTalk commands: http://help.rossvideo.com/carbonite-device/Topics/Protocol/RossTalk/CNT/RT-CNT-Comm.html
 
 ## vicreo_file.py
