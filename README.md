@@ -13,20 +13,23 @@ Requires the following parameters:
 * `button`: Text Field: Button number on that page that you want to execute
 
 ## rosstalk.py
+Allows commands to be sent to any device that accepts RossTalk commands.
 Requires the following parameters:
 * `ip`: Text Field: IP Address of the Ross switcher
 * `port`: Text Field: Port of the switcher (default of 7788)
 * `command`: RossTalk command to send (send multiple commands in the same string by separating them with semicolons `;`) For a list of RossTalk commands: http://help.rossvideo.com/carbonite-device/Topics/Protocol/RossTalk/CNT/RT-CNT-Comm.html
 
 ## vicreo_file.py
+Allows files and programs to be opened on remote computers running the free [VICREO Listener](https://jeffreydavidsz.github.io/VICREO-Listener/) software.
 Requires the following parameters:
-* `ip`: Text Field: IP Address of the computer running [VICREO Listener](https://jeffreydavidsz.github.io/VICREO-Listener/)
+* `ip`: Text Field: IP Address of the computer running VICREO Listener
 * `port`: Text Field: Port of the VICREO program (default of 10001)
-* `path`: Text Field: Path to execute on the remote program
+* `path`: Text Field: File to open or Program to execute on the remote computer
 
 ## vicreo_key.py
+Allows hotkeys to be sent to a remote computer running VICREO Listener.
 Requires the following parameters:
-* `ip`: Text Field: IP Address of the computer running [VICREO Listener](https://jeffreydavidsz.github.io/VICREO-Listener/)
+* `ip`: Text Field: IP Address of the computer running VICREO Listener
 * `port`: Text Field: Port of the VICREO program (default of 10001)
 * `key`: Menu: Remote key to press
   * Items: backspace, delete, enter, tab, escape, up, down, right, left, home, end, pageup, pagedown, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, command, alt, control, shift, right_shift, space, audio_mute, audio_vol_down, audio_vol_up, audio_play, audio_stop, audio_pause, audio_prev, audio_next, numpad_0, numpad_1, numpad_2, numpad_3, numpad_4, numpad_5, numpad_6, numpad_7, numpad_8, numpad_9, lights_mon_up, lights_mon_down, lights_kbd_toggle, lights_kbd_up, lights_kbd_down
@@ -40,6 +43,7 @@ Requires the following parameters:
 * `modifiers_rightctrl`: Checkbox
 
 ## videohub.py
+Allows destinations routes to be changed on Blackmagic VideoHub devices.
 Requires the following parameters:
 * `ip`: Text Field: IP Address of the VideoHub
 * `destination`: Destination to change (not zero-based, use the actual number)
