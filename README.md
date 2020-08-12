@@ -20,6 +20,13 @@ Requires the following parameters:
 * `port`: Text Field: Port of the switcher (default of 7788)
 * `command`: RossTalk command to send (send multiple commands in the same string by separating them with semicolons `;`) For a list of RossTalk commands: http://help.rossvideo.com/carbonite-device/Topics/Protocol/RossTalk/CNT/RT-CNT-Comm.html
 
+## tplink-hs100.py
+Allows you to turn on/off TP-Link HS100 Wifi Outlets.
+Requires the following parameters:
+* `ip`: Text Field: IP address of the HS100 outlet. Recommend you set a DHCP reservation for the outlet if you do not want this to change.
+* `command`: Menu: Command to send
+ * Items: on, off
+
 ## vicreo_file.py
 Allows files and programs to be opened on remote computers running the free [VICREO Listener](https://jeffreydavidsz.github.io/VICREO-Listener/) software.
 Requires the following parameters:
