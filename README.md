@@ -50,6 +50,13 @@ Requires the following parameters:
 * `modifiers_rightalt`: Checkbox
 * `modifiers_rightctrl`: Checkbox
 
+## vicreo_shell.py
+Allows shell scripts to be executed on remote computers running the free [VICREO Listener](https://jeffreydavidsz.github.io/VICREO-Listener/) software.
+Requires the following parameters:
+* `ip`: Text Field: IP Address of the computer running VICREO Listener
+* `port`: Text Field: Port of the VICREO program (default of 10001)
+* `shell`: Text Field: Shell script/command execute on the remote computer
+
 ## videohub.py
 Allows destinations routes to be changed on Blackmagic VideoHub devices.
 Requires the following parameters:
