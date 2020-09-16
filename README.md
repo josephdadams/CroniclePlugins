@@ -13,6 +13,19 @@ Requires the following parameters:
 * `page`: Text Field: Page that the button is on that you want to execute
 * `button`: Text Field: Button number on that page that you want to execute
 
+## pco_print.py
+Allows you to generate the PDF path needed to print Planning Center Services custom reports on a schedule. More information here: https://techministry.blog/2020/09/16/using-cronicle-the-planning-center-online-api-and-automator-on-a-mac-to-automate-printing-weekly-paperwork/
+Requires the following parameters:
+* `ip`: Text Field: IP Address of the computer running VICREO Listener
+* `port`: Text Field: Port of the VICREO program (default of 10001)
+* `appid`: Text Field: AppID you set up in your PCO Developer Account for this application.
+* `secret`: Text Field: Secret Key you set up in your PCO Developer Account for this application.
+* `servicetypes`: Text Field: semicolon `;` delimited list of PCO Service Type Ids for plans you want to include in the report
+* `reportid`: Text Field: Custom Report Id of the report you want to use
+* `pagesize`: Menu: Items `A4`, `US-Letter`, `US-Legal`, `US-Tabloid`
+* `printorientation`: Menu: Items `Portrait`, `Landscape`
+* `printmargin`: Menu: Items `0.0in`, `0.25in`, `0.5in`, `0.75in`, `1.0in` 
+
 ## rosstalk.py
 Allows commands to be sent to any device that accepts RossTalk commands.
 Requires the following parameters:
@@ -24,8 +37,7 @@ Requires the following parameters:
 Allows you to turn on/off TP-Link HS100 Wifi Outlets.
 Requires the following parameters:
 * `ip`: Text Field: IP address of the HS100 outlet. Recommend you set a DHCP reservation for the outlet if you do not want this to change.
-* `command`: Menu: Command to send
- * Items: on, off
+* `command`: Menu: Command to send. Items: `on`, `off`
 
 ## vicreo_file.py
 Allows files and programs to be opened on remote computers running the free [VICREO Listener](https://jeffreydavidsz.github.io/VICREO-Listener/) software.
