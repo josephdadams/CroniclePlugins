@@ -39,6 +39,12 @@ Requires the following parameters:
 * `ip`: Text Field: IP address of the HS100 outlet. Recommend you set a DHCP reservation for the outlet if you do not want this to change.
 * `command`: Menu: Command to send. Items: `on`, `off`
 
+## vicreo_applescript.py
+Allows AppleScripts to be executed on the remote computer running the free [VICREO Listener](https://jeffreydavidsz.github.io/VICREO-Listener/) software, provided that the remote computer is MacOS.
+* `ip`: Text Field: IP Address of the computer running VICREO Listener
+* `port`: Text Field: Port of the VICREO program (default of 10001)
+* `applescript`: Text Box: The AppleScript to execute. Recommend you test it locally on the remote computer first to ensure proper syntax of the AppleScript. Any necessary `'` or `"` marks must be escaped (i.e. `\'` or `\"`).
+
 ## vicreo_file.py
 Allows files and programs to be opened on remote computers running the free [VICREO Listener](https://jeffreydavidsz.github.io/VICREO-Listener/) software.
 Requires the following parameters:
