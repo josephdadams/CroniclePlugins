@@ -81,3 +81,8 @@ Requires the following parameters:
 * `ip`: Text Field: IP Address of the VideoHub
 * `destination`: Destination to change (not zero-based, use the actual number)
 * `source`: Source to use (not zero-based)
+
+## wakeonlan.py
+Allows magic packets to be sent to the specified MAC address. Requires the `wakeonlan` command line function. You can install this on Ubuntu with `sudo apt-get install wakeonlan`
+Requires the following parameters:
+* `mac`: Text Field: MAC Address of the device you want to send the magic packet to.
