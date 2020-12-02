@@ -13,6 +13,13 @@ Requires the following parameters:
 * `page`: Text Field: Page that the button is on that you want to execute
 * `button`: Text Field: Button number on that page that you want to execute
 
+## generic_tcp.py
+Allows you to send generic TCP strings to the specified IP/port.
+Requires the following parameters:
+* `ip`: Text Field: IP address of the device running Bitfocus Companion
+* `port`: Text Field: TCP listening port in Companion (default of 51234)
+* `message`: Text Field: Message string you want to send. Automatically sends `\n` at the end.
+
 ## pco_print.py
 Allows you to generate the PDF path needed to print Planning Center Services custom reports on a schedule. More information here: https://techministry.blog/2020/09/16/using-cronicle-the-planning-center-online-api-and-automator-on-a-mac-to-automate-printing-weekly-paperwork/
 Requires the following parameters:
