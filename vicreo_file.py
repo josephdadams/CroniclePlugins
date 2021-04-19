@@ -1,5 +1,12 @@
 #!/usr/bin/python3
 
+# File name: vicreo_file.py
+# Version: 1.0.0
+# Author: Joseph Adams
+# Email: josephdadams@gmail.com
+# Date created: 7/15/2020
+# Date last modified: 4/19/2021
+
 import sys
 import json
 import socket
