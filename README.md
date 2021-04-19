@@ -20,6 +20,17 @@ Requires the following parameters:
 * `port`: Text Field: TCP listening port in Companion (default of 51234)
 * `message`: Text Field: Message string you want to send. Automatically sends `\n` at the end.
 
+## midi_note.py
+Allows you to send MIDI notes via [midi-relay](http://github.com/josephdadams/midi-relay/) to the specified IP/port.
+Requires the following parameters:
+* `ip`: Text Field: IP address of the device running `midi-relay`
+* `port`: Text Field: TCP listening port for `midi-relay` (default of 4000)
+* `midiport`: Text Field: MIDI port to send messages to
+* `midicommand`: Menu: Items: `noteon`, `noteoff`
+* `channel`: Text Field: Channel Number (0-15)
+* `note`: Text Field: Note Number (0-127)
+* `velocity`: Text Field: Velocity Number (0-127)
+
 ## pco_print.py
 Allows you to generate the PDF path needed to print Planning Center Services custom reports on a schedule. More information here: https://techministry.blog/2020/09/16/using-cronicle-the-planning-center-online-api-and-automator-on-a-mac-to-automate-printing-weekly-paperwork/
 Requires the following parameters:
