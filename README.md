@@ -89,6 +89,14 @@ Requires the following parameters:
 * `destination`: Destination to change (not zero-based, use the actual number)
 * `source`: Source to use (not zero-based)
 
+## vista.py
+Allows cues to be triggered on Chroma-Q/Jands Vista consoles, provided they are configured to respond to midi messages via [midi-relay](http;//github.com/josephdadams/midi-relay)
+Requires the following parameters:
+* `ip`: Text Field: IP Address of Vista computer/console
+* `midiport`: Text Field: MIDI port to send messages to
+* `cuelist`: Text Field: Cue List that contains Cue to trigger
+* `cue`: Text Field: Cue to trigger
+
 ## wakeonlan.py
 Allows magic packets to be sent to the specified MAC address. Requires the `wakeonlan` command line function. You can install this on Ubuntu with `sudo apt-get install wakeonlan`
 Requires the following parameters:
