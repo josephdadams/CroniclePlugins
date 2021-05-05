@@ -51,6 +51,16 @@ Requires the following parameters:
 * `port`: Text Field: Port of the switcher (default of 7788)
 * `command`: RossTalk command to send (send multiple commands in the same string by separating them with semicolons `;`) For a list of RossTalk commands: http://help.rossvideo.com/carbonite-device/Topics/Protocol/RossTalk/CNT/RT-CNT-Comm.html
 
+## timekeeper.py
+Allows commands to be sent to a [TimeKeeper](http://github.com/josephdadams/timekeeper) server to set up timers automatically.
+Requires the following parameters:
+* `ip`: Text Field: IP Address of the TimeKeeper server
+* `port`: Text Field: Port of the server (usually 4000)
+* `date`: Text Field: Date you want to use for the timer. Must be M/D/YY. Keep blank and it will use "today's date" (based on the server)
+* `time`: Text Field: Time you want to use for the timer. Must be H:M:S. Keep blank and it will use 6AM.
+* `label`: Text Field: The label for the timer.
+* `roomid`: Text Field: The room ID to target. You can use `room-0` to target all rooms.
+
 ## tplink-hs100.py
 Allows you to turn on/off TP-Link HS100 Wifi Outlets.
 Requires the following parameters:
