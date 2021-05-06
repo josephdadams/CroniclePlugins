@@ -5,6 +5,13 @@ Create a new plugin in Cronicle and upload each script to the Cronicle server. Y
 
 Read more about how I am using these plugins here: https://techministry.blog/2020/07/16/automating-production-equipment-using-a-chromebox-and-a-scheduling-server/
 
+## ajakipro.py
+Allows control of an AJA Ki Pro unit.
+Requires the following parameters:
+`ip`: Text Field: IP Address of the AJA Ki Pro
+`transport`: Menu: Items `record`, `stop`, `play`
+`clipname`: TextField: Name of the clip. All clips will automatically be appended with the date in yyyymmdd format followed by an 8-character uuid to ensure a unique filename
+
 ## companion.py
 Allows buttons in Bitfocus Companion to be pressed remotely.
 Requires the following parameters:
