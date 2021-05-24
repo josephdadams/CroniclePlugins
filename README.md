@@ -12,6 +12,18 @@ Requires the following parameters:
 `transport`: Menu: Items `record`, `stop`, `play`
 `clipname`: TextField: Name of the clip. All clips will automatically be appended with the date in yyyymmdd format followed by an 8-character uuid to ensure a unique filename
 
+## ajakipro_checkavailablespace.py
+Checks the available space on the AJA Ki Pro. If the percentage is less than the desired percentage free, the job will fail and pass a message in the `chain_data` to be used in the next job (if configured).
+Requires the following parameters:
+`ip`: Text Field: IP Address of the AJA Ki Pro
+`percentage`: Text Field: Threshold percentage. If the available space on the drive is less than this number, the job will fail.
+
+## ajakipro_checktransportstate.py
+Checks the transport state on the AJA Ki Pro. If it does not match the desired transport state, the job will fail and pass a message in the `chain_data` to be used in the next job (if configured).
+Requires the following parameters:
+`ip`: Text Field: IP Address of the AJA Ki Pro
+`transport_state`: Menu: Items `Playing Reverse`, `Reverse 2X`, `Forward 2X`, `Forward 4X`, `Forward 8X`, `Forward 16X`, `Stop`, `Paused`, `Recording`, `Idle`
+
 ## companion.py
 Allows buttons in Bitfocus Companion to be pressed remotely.
 Requires the following parameters:
