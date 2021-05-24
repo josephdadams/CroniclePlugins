@@ -61,7 +61,18 @@ Requires the following parameters:
 * `reportid`: Text Field: Custom Report Id of the report you want to use
 * `pagesize`: Menu: Items `A4`, `US-Letter`, `US-Legal`, `US-Tabloid`
 * `printorientation`: Menu: Items `Portrait`, `Landscape`
-* `printmargin`: Menu: Items `0.0in`, `0.25in`, `0.5in`, `0.75in`, `1.0in` 
+* `printmargin`: Menu: Items `0.0in`, `0.25in`, `0.5in`, `0.75in`, `1.0in`
+
+## rock_workflow.py
+Allows you to send data to a Rock RMS workflow via webhook. Specifically designed to use a workflow that sends texts/emails to a Rock Group in the event that a Cronicle job fails, or to simply send a notfication at a certain time.
+Requires the following parameters:
+* `workflowid`: Hidden: The ID of the workflow to run
+* `groupid`:	Text Field: The Group ID to send the notification to
+* `type`:	Menu: Items `SMS`, `Email`
+* `subject`: Text Field
+* `body`:	Text Field
+* `token`:	Hidden: Auth token to authenticate the webhook request
+* `workflowurl`	Hidden: Complete URL to Rock server and workflow entry API (`/api/Workflows/WorkflowEntry/`)
 
 ## rosstalk.py
 Allows commands to be sent to any device that accepts RossTalk commands.
