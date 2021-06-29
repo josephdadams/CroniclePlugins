@@ -12,6 +12,12 @@ Requires the following parameters:
 `transport`: Menu: Items `record`, `stop`, `play`
 `clipname`: TextField: Name of the clip. All clips will automatically be appended with the date in yyyymmdd format followed by an 8-character uuid to ensure a unique filename
 
+## ajakipro_mediastate.py
+Allows control of an AJA Ki Pro unit's media state to put it in Record-Play or Data-LAN state depending on your needs.
+Requires the following parameters:
+`ip`: Text Field: IP Address of the AJA Ki Pro
+`state`: Menu: Items `record`, `data`
+
 ## ajakipro_checkavailablespace.py
 Checks the available space on the AJA Ki Pro. If the percentage is less than the desired percentage free, the job will fail and pass a message in the `chain_data` to be used in the next job (if configured).
 Requires the following parameters:
