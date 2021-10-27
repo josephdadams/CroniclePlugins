@@ -35,9 +35,18 @@ try:
 	s.send(('\r\n').encode())
 	time.sleep(.5)
 
+	s.close()
+
+	print('Connection closed.')
+
 	print('Sleeping for ' + delay + ' seconds.')
 
 	time.sleep(timedelay)
+
+	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+	s.connect((ip, 9999))
+
+	print('Connected to Kasa plug.')
 
 	print('Sending ON command.')
 
@@ -46,6 +55,8 @@ try:
 	time.sleep(.5)
 
 	s.close()
+
+	print('Connection closed.')
 
 	print('{ "complete": 1 }')
 except:
