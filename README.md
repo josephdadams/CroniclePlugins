@@ -103,7 +103,7 @@ Requires the following parameters:
 * `ip`: Text Field: IP address of the HS100 outlet. Recommend you set a DHCP reservation for the outlet if you do not want this to change.
 * `command`: Menu: Command to send. Items: `on`, `off`
 
-## tplink-kasa-offonn.py
+## tplink-kasa-offon.py
 Turns a TP Link Kasa Plug Off, waits the specified delay time in seconds, and then turns the plug back on. Helpful to avoid multiple events just to turn on a device that might need to be turned off before it will boot up on power.
 Requires the following parameters:
 * `ip`: Text Field: IP address of the HS100 outlet. Recommend you set a DHCP reservation for the outlet if you do not want this to change.
