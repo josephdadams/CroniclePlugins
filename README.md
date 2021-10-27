@@ -103,6 +103,12 @@ Requires the following parameters:
 * `ip`: Text Field: IP address of the HS100 outlet. Recommend you set a DHCP reservation for the outlet if you do not want this to change.
 * `command`: Menu: Command to send. Items: `on`, `off`
 
+## tplink-kasa-offonn.py
+Turns a TP Link Kasa Plug Off, waits the specified delay time in seconds, and then turns the plug back on. Helpful to avoid multiple events just to turn on a device that might need to be turned off before it will boot up on power.
+Requires the following parameters:
+* `ip`: Text Field: IP address of the HS100 outlet. Recommend you set a DHCP reservation for the outlet if you do not want this to change.
+* `delay`: Text Field: Delay time in seconds to wait between turning the plug off and then back on. Default of 5 seconds.
+
 ## vicreo_applescript.py
 Allows AppleScripts to be executed on the remote computer running the free [VICREO Listener](https://jeffreydavidsz.github.io/VICREO-Listener/) software, provided that the remote computer is MacOS.
 * `ip`: Text Field: IP Address of the computer running VICREO Listener
