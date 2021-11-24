@@ -114,6 +114,7 @@ Allows AppleScripts to be executed on the remote computer running the free [VICR
 * `ip`: Text Field: IP Address of the computer running VICREO Listener
 * `port`: Text Field: Port of the VICREO program (default of 10001)
 * `applescript`: Text Box: The AppleScript to execute. Recommend you test it locally on the remote computer first to ensure proper syntax of the AppleScript. Any necessary `'` or `"` marks must be escaped (i.e. `\'` or `\"`).
+* `password`: Text Box: *optional* If your instance of VICREO Listener has a password set, then include this.
 
 ## vicreo_file.py
 Allows files and programs to be opened on remote computers running the free [VICREO Listener](https://jeffreydavidsz.github.io/VICREO-Listener/) software.
@@ -121,6 +122,7 @@ Requires the following parameters:
 * `ip`: Text Field: IP Address of the computer running VICREO Listener
 * `port`: Text Field: Port of the VICREO program (default of 10001)
 * `path`: Text Field: File to open or Program to execute on the remote computer
+* `password`: Text Box: *optional* If your instance of VICREO Listener has a password set, then include this.
 
 ## vicreo_key.py
 Allows hotkeys to be sent to a remote computer running VICREO Listener.
@@ -137,6 +139,7 @@ Requires the following parameters:
 * `modifiers_rightshift`: Checkbox
 * `modifiers_rightalt`: Checkbox
 * `modifiers_rightctrl`: Checkbox
+* `password`: Text Box: *optional* If your instance of VICREO Listener has a password set, then include this.
 
 ## vicreo_shell.py
 Allows shell scripts to be executed on remote computers running the free [VICREO Listener](https://jeffreydavidsz.github.io/VICREO-Listener/) software.
@@ -144,6 +147,7 @@ Requires the following parameters:
 * `ip`: Text Field: IP Address of the computer running VICREO Listener
 * `port`: Text Field: Port of the VICREO program (default of 10001)
 * `shell`: Text Field: Shell script/command execute on the remote computer
+* `password`: Text Box: *optional* If your instance of VICREO Listener has a password set, then include this.
 
 ## videohub.py
 Allows destinations routes to be changed on Blackmagic VideoHub devices.

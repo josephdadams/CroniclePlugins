@@ -5,11 +5,12 @@
 # Author: Joseph Adams
 # Email: josephdadams@gmail.com
 # Date created: 7/15/2020
-# Date last modified: 4/19/2021
+# Date last modified: 11/24/2021
 
 import sys
 import json
 import socket
+import hashlib
 
 try:
 	stdinput = sys.stdin.readline()
@@ -24,8 +25,17 @@ try:
 	for line in applescript.splitlines():
 		print(line)
 		shellMsg = shellMsg + ' -e \'' + line.strip() + '\''
-	
-	message = '{ "type":"shell","shell":"osascript' + shellMsg + '" }'
+
+	if 'password' in data['params']:
+		password = data['params']['password']
+		passwordHash = ''
+
+		if password != '':
+			passwordHash = hashlib.md5(password.encode()).hexdigest()
+
+		message = '{ "type":"shell","shell":"osascript' + shellMsg + ', "password":"' + passwordHash + '" }'
+	else:
+		message = '{ "type":"shell","shell":"osascript' + shellMsg + '" }'
 	
 	print(message)
 	
