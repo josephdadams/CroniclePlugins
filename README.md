@@ -56,13 +56,23 @@ Requires the following parameters:
 * `note`: Text Field: Note Number (0-127)
 * `velocity`: Text Field: Velocity Number (0-127)
 
+## pco_live_vicreo.py
+Allows you to use Cronicle to load the PCO LIVE page for your next plan in a service type automatically in Safari on the computer running VICREO Listener.
+Requires the following parameters:
+* `ip`: Text Field: IP Address of the computer running VICREO Listener
+* `port`: Text Field: Port of the VICREO program (default of 10001)
+* `appid`: Hidden: AppID you set up in your PCO Developer Account for this application.
+* `secret`: Hidden: Secret Key you set up in your PCO Developer Account for this application.
+* `servicetype`: Text Field: semicolon `;` PCO Service Type Id for plan you want to load the LIVE page for
+
+
 ## pco_print.py
 Allows you to generate the PDF path needed to print Planning Center Services custom reports on a schedule. More information here: https://techministry.blog/2020/09/16/using-cronicle-the-planning-center-online-api-and-automator-on-a-mac-to-automate-printing-weekly-paperwork/
 Requires the following parameters:
 * `ip`: Text Field: IP Address of the computer running VICREO Listener
 * `port`: Text Field: Port of the VICREO program (default of 10001)
-* `appid`: Text Field: AppID you set up in your PCO Developer Account for this application.
-* `secret`: Text Field: Secret Key you set up in your PCO Developer Account for this application.
+* `appid`: Hidden: AppID you set up in your PCO Developer Account for this application.
+* `secret`: Hidden: Secret Key you set up in your PCO Developer Account for this application.
 * `servicetypes`: Text Field: semicolon `;` delimited list of PCO Service Type Ids for plans you want to include in the report
 * `reportid`: Text Field: Custom Report Id of the report you want to use
 * `pagesize`: Menu: Items `A4`, `US-Letter`, `US-Legal`, `US-Tabloid`
