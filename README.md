@@ -63,7 +63,7 @@ Requires the following parameters:
 * `port`: Text Field: Port of the VICREO program (default of 10001)
 * `appid`: Hidden: AppID you set up in your PCO Developer Account for this application.
 * `secret`: Hidden: Secret Key you set up in your PCO Developer Account for this application.
-* `servicetype`: Text Field: semicolon `;` PCO Service Type Id for plan you want to load the LIVE page for
+* `servicetype`: Text Field: PCO Service Type Id for plan you want to load the LIVE page for
 
 
 ## pco_print.py
