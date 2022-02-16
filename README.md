@@ -106,6 +106,8 @@ Requires the following parameters:
 * `time`: Text Field: Time you want to use for the timer. Must be H:M:S. Keep blank and it will use 6AM.
 * `label`: Text Field: The label for the timer.
 * `roomid`: Text Field: The room ID to target. You can use `room-0` to target all rooms.
+* `timerid`: Text Field: The Timer ID, if you want to choose it explicitly rather than having it auto generated.
+* `triggers`: Text Box: JSON Object Array for triggers. See [TimeKeeper documentation](http://github.com/josephdadams/timekeeper) for more information.
 
 ## tplink-hs100.py
 Allows you to turn on/off TP-Link HS100 Wifi Outlets.
