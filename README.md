@@ -30,6 +30,13 @@ Requires the following parameters:
 * `ip`: Text Field: IP Address of the AJA Ki Pro
 * `transport_state`: Menu: Items `Playing Reverse`, `Reverse 2X`, `Forward 2X`, `Forward 4X`, `Forward 8X`, `Forward 16X`, `Stop`, `Paused`, `Recording`, `Idle`
 
+## christie_lamphours.py
+Checks the lamp hours of the Christie projector. If the lamp hours are past the threshold, the job will fail and pass a message in the `chain_data1` to be used in the next job.
+Requires the following parameters:
+* `ip`: Text Fieldd: IP Address of the Projector
+* `name`: Text Field: Friendly name of the Projector used in the error message
+* `threshold`: Text Field: Threshold number of hours. If the lamp hours are greater than this, the job will fail.
+
 ## companion.py
 Allows buttons in Bitfocus Companion to be pressed remotely.
 Requires the following parameters:
