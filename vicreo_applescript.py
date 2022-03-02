@@ -5,7 +5,7 @@
 # Author: Joseph Adams
 # Email: josephdadams@gmail.com
 # Date created: 7/15/2020
-# Date last modified: 11/24/2021
+# Date last modified: 3/1/2022
 
 import sys
 import json
@@ -33,7 +33,7 @@ try:
 		if password != '':
 			passwordHash = hashlib.md5(password.encode()).hexdigest()
 
-		message = '{ "type":"shell","shell":"osascript' + shellMsg + ', "password":"' + passwordHash + '" }'
+		message = '{ "type":"shell","shell":"osascript' + shellMsg + '", "password":"' + passwordHash + '" }'
 	else:
 		message = '{ "type":"shell","shell":"osascript' + shellMsg + '" }'
 	
