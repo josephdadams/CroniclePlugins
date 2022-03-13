@@ -63,6 +63,12 @@ Requires the following parameters:
 * `note`: Text Field: Note Number (0-127)
 * `velocity`: Text Field: Velocity Number (0-127)
 
+## panasonic_ptz.py
+Allows you to control presets of your Panasonic PTZ.
+Requires the following parameters:
+* `ip`: Text Field: IP address of the camera
+* `preset`: Text Field: Preset Number
+
 ## pco_live_vicreo.py
 Allows you to use Cronicle to load the PCO LIVE page for your next plan in a service type automatically in Safari on the computer running VICREO Listener.
 Requires the following parameters:
