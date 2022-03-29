@@ -48,8 +48,8 @@ Requires the following parameters:
 ## generic_tcp.py
 Allows you to send generic TCP strings to the specified IP/port.
 Requires the following parameters:
-* `ip`: Text Field: IP address of the device running Bitfocus Companion
-* `port`: Text Field: TCP listening port in Companion (default of 51234)
+* `ip`: Text Field: IP address of the device
+* `port`: Text Field: TCP listening port
 * `message`: Text Field: Message string you want to send. Automatically sends `\n` at the end.
 
 ## midi_note.py
@@ -109,6 +109,14 @@ Requires the following parameters:
 * `ip`: Text Field: IP Address of the Ross switcher
 * `port`: Text Field: Port of the switcher (default of 7788)
 * `command`: RossTalk command to send (send multiple commands in the same string by separating them with semicolons `;`) For a list of RossTalk commands: http://help.rossvideo.com/carbonite-device/Topics/Protocol/RossTalk/CNT/RT-CNT-Comm.html
+
+## symetrix_dsp.py
+Allows you to update dB values for controller inputs on your Symetrix DSP over TCP.
+Requires the following parameters:
+* `ip`: Text Field: IP address of the device running Bitfocus Companion
+* `port`: Hidden Field: TCP port (default should be "48631")
+* `controller`: Text Field: Controller Number / Input to adjust. Might need to be 0-based depending on your configuration.
+* `db`: Text Field: dB value to adjust to. The plugin uses this formula to calculate the Controller Position: Volume dB = -72 + 84*(CONTROLLER POSITION/65535)
 
 ## timekeeper.py
 Allows commands to be sent to a [TimeKeeper](http://github.com/josephdadams/timekeeper) server to set up timers automatically.
