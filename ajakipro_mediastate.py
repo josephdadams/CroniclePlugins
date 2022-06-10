@@ -5,7 +5,7 @@
 # Author: Joseph Adams
 # Email: josephdadams@gmail.com
 # Date created: 6/29/2021
-# Date last modified: 6/29/2021
+# Date last modified: 6/10/2022
 
 import sys
 import json
@@ -30,7 +30,7 @@ try:
 		#send record-play state command
 		KiProParameter = 'eParamID_MediaState'
 		KiProParameterValue = '0'
-	elif transport == 'data':
+	elif state == 'data':
 		#send data-lan state command
 		KiProParameter = 'eParamID_MediaState'
 		KiProParameterValue = '1'
