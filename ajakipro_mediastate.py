@@ -35,7 +35,7 @@ try:
 		KiProParameter = 'eParamID_MediaState'
 		KiProParameterValue = '1'
 	else:
-		print('Invalid state command: ' + transport)
+		print('Invalid state command: ' + state)
 
 	if (KiProParameter != ''):
 		url = baseurl + KiProParameter + '&value=' + KiProParameterValue
