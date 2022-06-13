@@ -52,6 +52,13 @@ Requires the following parameters:
 * `port`: Text Field: TCP listening port
 * `message`: Text Field: Message string you want to send. Automatically sends `\n` at the end.
 
+## kxwell.py
+Allows you to control a KXWell PTZ head and recall presets.
+Requires the following parameters:
+* `ip`: Text Field: IP address of the device
+* `preset`: Text Field: Preset to recall.
+Uses port 5000.
+
 ## midi_note.py
 Allows you to send MIDI notes via [midi-relay](http://github.com/josephdadams/midi-relay/) to the specified IP/port.
 Requires the following parameters:
