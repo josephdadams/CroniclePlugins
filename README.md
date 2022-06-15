@@ -52,6 +52,13 @@ Requires the following parameters:
 * `port`: Text Field: TCP listening port
 * `message`: Text Field: Message string you want to send. Automatically sends `\n` at the end.
 
+## jtech-matrix.py
+Allows you to control routings on a JTech Digital HDMI Matrix.
+Requires the following parameters:
+* `ip`: Text Field: IP address of the device
+* `output`: Text Field: Output Number
+* `input`: Text Field: Input Number
+
 ## kxwell.py
 Allows you to control a KXWell PTZ head and recall presets.
 Requires the following parameters:
