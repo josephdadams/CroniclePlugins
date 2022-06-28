@@ -4,6 +4,9 @@
 #
 # Created by Ian Thompson on Thu Jun 23 2022
 # ianthompson@nicelion.com
+# 
+# Version 1.0
+# Modified: Jun 28, 2022
 
 # Control Christie Projectors via TCP
 
