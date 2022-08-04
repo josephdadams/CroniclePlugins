@@ -22,15 +22,27 @@ try:
 	output = data['params']['output']
 	input = data['params']['input']
 
-	cgiURL = '/videoset' + str(time.time())
-	payload = '#video_d out' + output + ' matrix=' + input
+	numoutputs = 4
 
-	url = 'http://' + ip + cgiURL
-
-	print('Routing Output ' + output + ' to Input ' + input)
-	print('URL: ' + url)
-	print('Payload: ' + payload)
-	requests.post(url, data=payload, timeout=15)
+	if output == 'All':
+		count = 1
+		while (count <= numoutputs):   
+			cgiURL = '/videoset' + str(time.time())
+			payload = '#video_d out' + str(count) + ' matrix=' + input
+			url = 'http://' + ip + cgiURL
+			print('Routing Output ' + str(count) + ' to Input ' + input)
+			print('URL: ' + url)
+			print('Payload: ' + payload)
+			requests.post(url, data=payload, timeout=15)			
+			count = count + 1
+	else:
+		cgiURL = '/videoset' + str(time.time())
+		payload = '#video_d out' + output + ' matrix=' + input
+		url = 'http://' + ip + cgiURL
+		print('Routing Output ' + output + ' to Input ' + input)
+		print('URL: ' + url)
+		print('Payload: ' + payload)
+		requests.post(url, data=payload, timeout=15)
 	
 	print('{ "complete": 1 }')
 except Exception as e:
