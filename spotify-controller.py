@@ -35,26 +35,26 @@ try:
 	elif command == 'Play Toggle':
 		cmd = 'playToggle'
 	elif command == 'Next':
-		cmd == 'next'
+		cmd = 'next'
 	elif command == 'Previous':
-		cmd == 'previous'
+		cmd = 'previous'
 	elif command == 'Volume Up':
-		cmd == 'volumeUp'
+		cmd = 'volumeUp'
 	elif command == 'Volume Down':
-		cmd == 'volumeDown'
+		cmd = 'volumeDown'
 	elif command == 'Set Volume':
 		volume = data['params']['volume']
-		cmd == 'setVolume/' + volume
+		cmd = 'setVolume/' + volume
 	elif command == 'Mute':
-		cmd == 'mute'
+		cmd = 'mute'
 	elif command == 'Unmute':
-		cmd == 'unmute'
+		cmd = 'unmute'
 	elif command == 'Repeat On':
-		cmd == 'repeatOn'
+		cmd = 'repeatOn'
 	elif command == 'Repeat Off':
-		cmd == 'repeatOff'
+		cmd = 'repeatOff'
 	elif command == 'Repeat Toggle':
-		cmd == 'repeatToggle'
+		cmd = 'repeatToggle'
 	elif command == 'Shuffle On':
 		cmd = 'shuffleOn'
 	elif command == 'Shuffle Off':
@@ -62,9 +62,11 @@ try:
 	elif command == 'Shuffle Toggle':
 		cmd = 'shuffleToggle'
 
+	print('Command: ' + command)
+
 	if cmd != '':
 		url = 'http://' + ip + ':' + port + '/' + cmd
-		print('Command: ' + command)
+		
 		print('URL: ' + url)
 		r = requests.get(url = url)
 		json_data = r.json()
