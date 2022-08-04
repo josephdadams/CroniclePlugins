@@ -82,7 +82,7 @@ Allows you to control routings on a JTech Digital HDMI Matrix.
 Requires the following parameters:
 
 - `ip`: Text Field: IP address of the device
-- `output`: Text Field: Output Number
+- `output`: Text Field: Output Number; also accepts `All` to assign the Input to all Outputs
 - `input`: Text Field: Input Number
 
 ## kxwell.py
@@ -162,6 +162,17 @@ Requires the following parameters:
 - `ip`: Text Field: IP Address of the Ross switcher
 - `port`: Text Field: Port of the switcher (default of 7788)
 - `command`: RossTalk command to send (send multiple commands in the same string by separating them with semicolons `;`) For a list of RossTalk commands: http://help.rossvideo.com/carbonite-device/Topics/Protocol/RossTalk/CNT/RT-CNT-Comm.html
+
+## spotify-controller.py
+
+Allows you to send commands via the REST API to [spotify-controller](http://github.com/josephdadams/spotify-controller).
+Requires the following paramers:
+
+- `ip`: Text Field: IP Address of the computer running spotify-controller
+- `command`: Menu: Items: (`Play`, `Play Track`, `Play Track In Context`, `Pause`, `Play Toggle`, `Next`, `Previous`, `Volume Up`, `Volume Down`, `Set Volume`, `Mute`, `Unmute`, `Repeat On`, `Repeat Off`, `Repeat Toggle`, `Shuffle On`, `Shuffle Off`, `Shuffle Toggle`
+- `trackid`: Text Field: Track ID to play
+- `contextid`: Text Field: Context of Track ID
+-  `volume`: Text Field: Volume Level (0-100)
 
 ## symetrix_dsp.py
 
