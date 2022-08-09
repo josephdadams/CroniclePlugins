@@ -186,7 +186,7 @@ Allows you to send commands via the REST API to [spotify-controller](http://gith
 Requires the following paramers:
 
 - `ip`: Text Field: IP Address of the computer running spotify-controller
-- `command`: Menu: Items: (`Play`, `Play Track`, `Play Track In Context`, `Pause`, `Play Toggle`, `Next`, `Previous`, `Volume Up`, `Volume Down`, `Set Volume`, `Mute`, `Unmute`, `Repeat On`, `Repeat Off`, `Repeat Toggle`, `Shuffle On`, `Shuffle Off`, `Shuffle Toggle`
+- `command`: Menu: Items: (`Play`, `Play Track`, `Play Track In Context`, `Pause`, `Play Toggle`, `Next`, `Previous`, `Volume Up`, `Volume Down`, `Set Volume`, `Ramp Volume`, `Mute`, `Unmute`, `Repeat On`, `Repeat Off`, `Repeat Toggle`, `Shuffle On`, `Shuffle Off`, `Shuffle Toggle`
 - `trackid`: Text Field: Track ID to play
 - `contextid`: Text Field: Context of Track ID
 -  `volume`: Text Field: Volume Level (0-100)
