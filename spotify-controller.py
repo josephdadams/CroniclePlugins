@@ -45,6 +45,9 @@ try:
 	elif command == 'Set Volume':
 		volume = data['params']['volume']
 		cmd = 'setVolume/' + volume
+	elif command == 'Ramp Volume':
+		volume = data['params']['volume']
+		cmd = 'rampVolume/' + volume
 	elif command == 'Mute':
 		cmd = 'mute'
 	elif command == 'Unmute':
