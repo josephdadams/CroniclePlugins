@@ -102,6 +102,15 @@ Requires the following parameters:
 - `preset`: Text Field: Preset to recall.
   Uses port 5000.
 
+# lyntec_zone.py
+
+Allow you to turn a Lyntec RPC breaker zone on/off.
+Requires the following parameters:
+
+- `ip`: Text Field: IP address of the device
+- `zone`: Text Field: Zone number to control. e.g. `001`
+- `power`: Menu: Items `on`, `off`
+
 ## midi_note.py
 
 Allows you to send MIDI notes via [midi-relay](http://github.com/josephdadams/midi-relay/) to the specified IP/port.
