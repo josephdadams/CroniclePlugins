@@ -67,6 +67,14 @@ Requires the following parameters:
 - `page`: Text Field: Page that the button is on that you want to execute
 - `button`: Text Field: Button number on that page that you want to execute
 
+## cueserver.py
+
+Allows you to execute CueScripts on an Interactive Technologies CueServer.
+
+Requires the following parameters:
+- `ip`: Text Field: IP address of the CueServer
+- `cuescript`: Text Field: CueScript to execute (will be URL encoded)
+
 ## generic_tcp.py
 
 Allows you to send generic TCP strings to the specified IP/port.
