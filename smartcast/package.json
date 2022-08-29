@@ -1,0 +1,15 @@
+{
+  "name": "cronicle-smartcast",
+  "version": "1.0.0",
+  "description": "Control Vizio TVs in Cronicle via Smartcast protocol.",
+  "main": "index.js",
+  "dependencies": {
+    "vizio-smart-cast": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joseph Adams <josephdadams@gmail.com>",
+  "license": "MIT"
+}

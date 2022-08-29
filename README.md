@@ -180,6 +180,19 @@ Requires the following parameters:
 - `port`: Text Field: Port of the switcher (default of 7788)
 - `command`: RossTalk command to send (send multiple commands in the same string by separating them with semicolons `;`) For a list of RossTalk commands: http://help.rossvideo.com/carbonite-device/Topics/Protocol/RossTalk/CNT/RT-CNT-Comm.html
 
+## Smartcast
+
+Allows you to control Vizio TVs with Smartcast.
+
+Requires the following parameters:
+
+- `ip`: Text Field: IP Address of the TV
+- `token`: Text Field: Auth Token
+- `command`: Menu: Items (`Power On`, `Power Off`, `Change Input`)
+- `input`: Text Field: Input Name (`HDMI-1`) if changing the input
+
+*Copy the folder to your Cronicle server and then run `npm install` within that folder to install the dependencies.*
+
 ## spotify-controller.py
 
 Allows you to send commands via the REST API to [spotify-controller](http://github.com/josephdadams/spotify-controller).
