@@ -63,9 +63,13 @@ function controlPower(state) {
 	else {
 		tv.control.power.off();
 	}
+
+	console.log(`{"complete": 1}`);
 }
 
 function controlInput() {
 	console.log(`Turning TV to Input ${(input)}`);
 	tv.input.set(input);
+
+	console.log(`{"complete": 1}`);
 }
