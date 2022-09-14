@@ -314,6 +314,20 @@ Requires the following parameters:
 - `destination`: Destination to change (not zero-based, use the actual number)
 - `source`: Source to use (not zero-based)
 
+## videohub_bulk.py
+
+Allows destinations routes to be changed **in bulk** on Blackmagic VideoHub devices.
+Requires the following parameters:
+
+- `ip`: Text Field: IP Address of the VideoHub
+- `routes`: Text Box: A list of Destinations and their new Sources, not zero-based, separated by a space
+
+	Example: This routes Destinations 53 and 54 to Source 7
+	```
+	53 7
+	54 7
+	```
+
 ## vista.py
 
 Allows cues to be triggered on Chroma-Q/Jands Vista consoles, provided they are configured to respond to midi messages via [midi-relay](http;//github.com/josephdadams/midi-relay)
