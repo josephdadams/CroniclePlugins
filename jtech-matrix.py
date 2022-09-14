@@ -35,6 +35,7 @@ try:
 			print('Payload: ' + payload)
 			requests.post(url, data=payload, timeout=15)			
 			count = count + 1
+			time.sleep(5)
 	else:
 		cgiURL = '/videoset' + str(time.time())
 		payload = '#video_d out' + output + ' matrix=' + input
