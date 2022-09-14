@@ -1,0 +1,15 @@
+{
+  "name": "cronicle-obs",
+  "version": "1.0.0",
+  "description": "Control OBS in Cronicle via OBS websockt v5+ protocol.",
+  "main": "index.js",
+  "dependencies": {
+    "obs-websocket-js": "^5.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joseph Adams <josephdadams@gmail.com>",
+  "license": "MIT"
+}

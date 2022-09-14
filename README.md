@@ -124,6 +124,19 @@ Requires the following parameters:
 - `note`: Text Field: Note Number (0-127)
 - `velocity`: Text Field: Velocity Number (0-127)
 
+## OBS
+
+Allows you to control OBS Studio using the Websockets protocol.
+
+* Requires the following parameters:
+	* `host`: Text Field: IP Address of OBS computer.
+	* `port`: Text Field: Port that OBS websockets is using. Example: `4455`
+	* `password`: Text Field: Password that OBS websockets is using.
+	* `command`: Menu: Command to send to OBS. Items: Start Stream, Stop Stream, Switch Scene
+	* `destinationScene`: Text Field: Scene to switch to in OBS
+
+*Copy the `obs` folder to your Cronicle server and then run `npm install` within that folder to install the dependencies.*
+
 ## panasonic_ptz.py
 
 Allows you to control presets of your Panasonic PTZ.
@@ -191,7 +204,7 @@ Requires the following parameters:
 - `command`: Menu: Items (`Power On`, `Power Off`, `Change Input`)
 - `input`: Text Field: Input Name (`HDMI-1`) if changing the input
 
-*Copy the folder to your Cronicle server and then run `npm install` within that folder to install the dependencies.*
+*Copy the `smartcast` folder to your Cronicle server and then run `npm install` within that folder to install the dependencies.*
 
 ## spotify-controller.py
 
