@@ -47,29 +47,56 @@ process.stdin.on('data', (res) => {
 				controlInput();
 				break;
 		}
-	} catch (err) {
-		console.log(err);
-
-		console.log(`{ "complete": 1, "code": 999, "description": "Failed to execute: ${err}" }`);
-		process.exit(999);
+	}
+	catch (error) {
+		throwError(error);
 	}
 });
 
 function controlPower(state) {
 	console.log(`Turning TV Power ${(state ? 'On' : 'Off')}`);
 	if (state) {
-		tv.control.power.on();
+		tv.control.power.on()
+		.then((data) => {
+			console.log(data);
+
+			console.log(`{"complete": 1}`);
+		})
+		.catch((error) => {
+			throwError(error);
+		});
 	}
 	else {
-		tv.control.power.off();
-	}
+		tv.control.power.off()
+		.then((data) => {
+			console.log(data);
 
-	console.log(`{"complete": 1}`);
+			console.log(`{"complete": 1}`);
+		})
+		.catch((error) => {
+			throwError(error);
+		});
+	}
 }
 
 function controlInput() {
 	console.log(`Turning TV to Input ${(input)}`);
-	tv.input.set(input);
 
-	console.log(`{"complete": 1}`);
+	tv.input.set(input)
+	.then((data) => {
+		console.log(data);
+
+		console.log(`{"complete": 1}`);
+	})
+	.catch((error) => {
+		throwError(error);
+	});
+}
+
+function throwError(err) {
+	console.log(`{ "complete": 1, "code": 999, "description": "Failed to execute. See log.}" }`);
+
+	console.log('Got this error:');
+	console.log(err.toString());
+	process.exit(999);
 }
