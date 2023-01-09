@@ -77,27 +77,46 @@ function runCommand() {
 
 async function controlStream(value) {
 	//starts or stops the stream
-	let data = await obs.call(value);
+	let data = await obs.call(value)
+	.then((result) => {
+		console.log(result)
+	})
+	.catch((error) => {
+		console.log(error)
+		console.log(`{ "complete": 1, "code": 999, "description": "Failed to execute: See log for more information." }`);
+	});
 	disconnectOBS();
 }
 
 async function controlScene(sceneName) {
 	//changes the program scene to the sceneName
 	let data = await obs.call('SetCurrentProgramScene', { sceneName: sceneName })
+	.then((result) => {
+		console.log(result)
+	})
+	.catch((error) => {
+		console.log(error)
+		console.log(`{ "complete": 1, "code": 999, "description": "Failed to execute: See log for more information." }`);
+	});
 	disconnectOBS();
 }
 
 async function connectOBS() {
-	if (obs) {
-		await obs.disconnect();
-	} else {
-		obs = new OBSWebSocket();
-	}
+	disconnectOBS();
+	obs = new OBSWebSocket();
+	
 	try {
 		await obs.connect(
 			`ws:///${host}:${port}`,
 			password
-		);
+		)
+		.then((result) => {
+			console.log(result)
+		})
+		.catch((error) => {
+			console.log(error)
+			console.log(`{ "complete": 1, "code": 999, "description": "Failed to execute: See log for more information." }`);
+		});
 	} catch (error) {
 		console.log(error);
 	}
@@ -105,6 +124,13 @@ async function connectOBS() {
 
 async function disconnectOBS() {
 	if (obs) {
-		await obs.disconnect();
+		await obs.disconnect()
+		.then((result) => {
+			console.log(result)
+		})
+		.catch((error) => {
+			console.log(error)
+			console.log(`{ "complete": 1, "code": 999, "description": "Failed to execute: See log for more information." }`);
+		});
 	}
 }
