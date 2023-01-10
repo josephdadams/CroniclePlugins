@@ -29,11 +29,16 @@ process.stdin.on('data', (res) => {
 
 	try {
 		ip = data['params']['ip'];
+		port = data['params']['port'];
 		token = data['params']['token'];
 		command = data['params']['command'];
 		input = data['params']['input'];
 
-		tv = new smartcast(ip);
+		if (port !== '7345' && port !=='9000') {
+			port = '7345'
+		}
+
+		tv = new smartcast(ip + ':' + port);
 		tv.pairing.useAuthToken(token);
 
 		switch(command) {

@@ -200,6 +200,7 @@ Allows you to control Vizio TVs with Smartcast.
 Requires the following parameters:
 
 - `ip`: Text Field: IP Address of the TV
+- `port`: Text Field: Port (7345 or 9000 - older tv's use 9000)
 - `token`: Text Field: Auth Token
 - `command`: Menu: Items (`Power On`, `Power Off`, `Change Input`)
 - `input`: Text Field: Input Name (`HDMI-1`) if changing the input
