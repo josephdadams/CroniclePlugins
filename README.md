@@ -93,6 +93,15 @@ Requires the following parameters:
 - `output`: Text Field: Output Number; also accepts `All` to assign the Input to all Outputs
 - `input`: Text Field: Input Number
 
+## jtech-matrix-ip2sl.py
+
+Allows you to control routings on a JTech Digital HDMI Matrix but sends the command via a GlobalCache IP2SL device to the matrix via serial.
+Requires the following parameters:
+
+- `ip`: Text Field: IP address of the GlobalCache IP2SL
+- `output`: Text Field: Output Number; also accepts `All` to assign the Input to all Outputs
+- `input`: Text Field: Input Number
+
 ## kxwell.py
 
 Allows you to control a KXWell PTZ head and recall presets.

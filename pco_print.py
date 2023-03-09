@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
 # File name: pco_print.py
-# Version: 1.0.0
+# Version: 1.0.1
 # Author: Joseph Adams
 # Email: josephdadams@gmail.com
 # Date created: 9/16/2020
-# Date last modified: 4/19/2021
+# Date last modified: 2/7/2023
 
 import sys
 import json
@@ -42,16 +42,17 @@ try:
 			responseData = json.loads(response.read())
 			planIds.append(responseData['data'][0]['id'])
 
-	planIdParams = '&plan_id=' + planIds[0]
+	planIdParams = ''
 	for x in planIds:
-		planIdParams = planIdParams + '&' + x + '_plan=true'
+		planIdParams = planIdParams + '&plan_ids[]=' + x
 
 	#send the VICREO commands
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	s.connect((ip, port))
 
 	#build the PDF URL Path
-	pdfPath = 'https://services.planningcenteronline.com/reports/' + reportId + '.pdf?utf8=%E2%9C%93&custom_report_id=' + reportId + '&print_to=pdf&print_page_size=' + pageSize + '&print_orientation=' + printOrientation + '&print_margin=' + printMargin + planIdParams
+	pdfPath = 'https://services.planningcenteronline.com/report_templates/' + reportId + '/report.pdf?page_size=' + pageSize + '&orientation=' + printOrientation + '&margin=' + printMargin + planIdParams
+	print(pdfPath)
 	path = '/usr/bin/open -a Safari \'' + pdfPath + '\''
 	message = '{ "type":"shell","shell":"' + path + '" }'
 	s.send(message.encode())
