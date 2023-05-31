@@ -66,6 +66,7 @@ function controlPower(state) {
 			console.log(data);
 
 			console.log(`{"complete": 1}`);
+			process.exit(0);
 		})
 		.catch((error) => {
 			throwError(error);
@@ -77,6 +78,7 @@ function controlPower(state) {
 			console.log(data);
 
 			console.log(`{"complete": 1}`);
+			process.exit(0);
 		})
 		.catch((error) => {
 			throwError(error);
@@ -92,6 +94,7 @@ function controlInput() {
 		console.log(data);
 
 		console.log(`{"complete": 1}`);
+		process.exit(0);
 	})
 	.catch((error) => {
 		throwError(error);
