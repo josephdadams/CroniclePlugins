@@ -25,6 +25,7 @@ commandList = command.split(';')
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((ip, port))
 for i in commandList:
+	print('sending: ' + str(i))
 	s.send((str(i) + '\r\n').encode())
 	time.sleep(.5)
 s.close()
