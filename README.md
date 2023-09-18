@@ -219,13 +219,23 @@ Requires the following parameters:
 ## spotify-controller.py
 
 Allows you to send commands via the REST API to [spotify-controller](http://github.com/josephdadams/spotify-controller).
-Requires the following paramers:
+Requires the following parameters:
 
 - `ip`: Text Field: IP Address of the computer running spotify-controller
 - `command`: Menu: Items: (`Play`, `Play Track`, `Play Track In Context`, `Pause`, `Play Toggle`, `Next`, `Previous`, `Volume Up`, `Volume Down`, `Set Volume`, `Ramp Volume`, `Mute`, `Unmute`, `Repeat On`, `Repeat Off`, `Repeat Toggle`, `Shuffle On`, `Shuffle Off`, `Shuffle Toggle`
 - `trackid`: Text Field: Track ID to play
 - `contextid`: Text Field: Context of Track ID
 -  `volume`: Text Field: Volume Level (0-100)
+
+## shure_charger.py
+
+Allows you to check if your Shure batteries in your SBC220 or SBC240 are present in the dock. Useful to make sure people put the mics back on charge after an event.
+Requires the following parameters:
+
+- `ip`: Text Field: IP Address of the Shure charger
+- `room_name`: Text Field: Friendly name of the room/location of this charger, for the chain message.
+
+It currently only checks for Battery Detection in Slots 1 & 2. If both are present, the job will succeed. If one or both are missing, the job will fail and print a message for job chaining. Then you can set a chaining job to send a notification, for example.
 
 ## symetrix_dsp.py
 
