@@ -47,7 +47,8 @@ try:
 
 	if batt1_status == 'YES' and batt2_status == 'YES':
 		msg = room_name + ' - ' + 'Both mics are detected in the charger.'
-		print('{ "complete": 1, description": "' + msg + '" }')
+		#print('{ "complete": 1, description": "' + msg + '" }')
+		print('{ "complete": 1 }')
 	else:
 		if batt1_status == 'NO' and batt2_status == 'NO':
 			msg = 'No mics detected in either slot of the charger.'
