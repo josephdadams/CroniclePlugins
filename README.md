@@ -133,6 +133,22 @@ Requires the following parameters:
 - `note`: Text Field: Note Number (0-127)
 - `velocity`: Text Field: Velocity Number (0-127)
 
+## ntfy.py
+
+Allows you to send notifications to the [ntfy](https://ntfy.sh) service (or a custom ntfy server).
+Requires the following parameters:
+
+- `server`: Text Field: Server address for ntfy (default of https://ntfy.sh)
+- `topic`: Text Field: Topic to send the notification to
+- `useauth`:  Checkbox: Whether or not to use Authentication with the request (the default ntfy server does not require it)
+- `authtype`: Menu: Items: (Basic Auth, Bearer Token), Default: “Basic Auth”
+- `override`: Checkbox: Whether or not to override the headers with custom headers (useful for utilizing additional parameters I did not feel like implementing)
+- `headers`: Text Box: All the custom headers, JSON format
+- `title`: Text Field: Title to include with the notification
+- `message`: Text Box: Message Body
+- `priority`: Menu: Items: (Min, Low, Default, High, Max/Urgent), Default: “Default”
+- `email`: Text Field: Email Address to also send notification to
+
 ## OBS
 
 Allows you to control OBS Studio using the Websockets protocol.
