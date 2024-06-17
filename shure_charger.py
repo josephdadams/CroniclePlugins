@@ -5,16 +5,23 @@
 # Author: Joseph Adams
 # Email: josephdadams@gmail.com
 # Date created: 9/18/2023
-# Date last modified: 9/18/2023
+# Date last modified: 6/17/2024
 
 import sys
 import json
 import socket
 import time
+import os
 
 try:
 	stdinput = sys.stdin.readline()
 	data = json.loads(stdinput)
+
+	print(str(stdinput))
+
+	print('Getting battery status...')
+	print('IP: ' + data['params']['ip'])
+	print('Room Name: ' + data['params']['room_name'])
 	
 	ip = data['params']['ip']
 	port = 2202
@@ -45,10 +52,12 @@ try:
 
 	s.close()
 
+	jobStatus = {}
+
 	if batt1_status == 'YES' and batt2_status == 'YES':
 		msg = room_name + ' - ' + 'Both mics are detected in the charger.'
-		#print('{ "complete": 1, description": "' + msg + '" }')
-		print('{ "complete": 1 }')
+		jobStatus = { "complete": 1, "code": 0, "description": msg, "chain_data": { "message": msg } }
+		print(json.dumps(jobStatus))
 	else:
 		if batt1_status == 'NO' and batt2_status == 'NO':
 			msg = 'No mics detected in either slot of the charger.'
@@ -57,6 +66,10 @@ try:
 		elif batt2_status == 'NO':
 			msg = 'No mic detected in Slot 2 of the charger.'
 		msg = room_name + ' - ' + msg
-		print('{ "complete": 1, "code": 999, "description": "' + msg + '", "chain_data": { "message": "' + msg + '" } }')
+		jobStatus = { "complete": 1, "code": 999, "description": msg, "chain_data": { "message": msg } }
+except OSError as error: 
+	jobStatus = { "complete": 1, "code": 999, "description": "Job Failed to execute: " + str(error), "chain_data": { "message": "Job failed to execute: " + os.environ['JOB_EVENT_TITLE'] + " - Error: " + str(error) } }
 except:
-	print('{ "complete": 1, "code": 999, "description": "Failed to execute: ' + str(sys.exc_info()[0]) + '" }')
+	jobStatus = { "complete": 1, "code": 999, "description": "Failed to execute: " + str(sys.exc_info()[0]), "chain_data": { "message": "Failed to execute: " + str(sys.exc_info()[0]) } }
+finally:
+	print(json.dumps(jobStatus))
