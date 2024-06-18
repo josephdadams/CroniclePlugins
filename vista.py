@@ -5,11 +5,13 @@
 # Author: Joseph Adams
 # Email: josephdadams@gmail.com
 # Date created: 7/15/2020
-# Date last modified: 4/19/2021
+# Date last modified: 6/17/2024
 
 import sys
 import json
 import requests
+
+jobStatus = {}
 
 try:
 	stdinput = sys.stdin.readline()
@@ -32,9 +34,13 @@ try:
 		"cuelist": cueList,
 		"cuepath": ""
 	}
-	
-	r = requests.post(url = url, json = jsonData)
-	
-	print('{ "complete": 1 }')
+
+	try:
+		requests.post(url = url, json = jsonData, timeout=10)
+		jobStatus = { "complete": 1 }
+	except requests.exceptions.Timeout:
+		jobStatus = { "complete": 1, "code": 999, "description": "Request timed out." }
 except:
-	print('{ "complete": 1, "code": 999, "description": "Failed to execute." }')
+	jobStatus = { "complete": 1, "code": 999, "description": "Failed to execute." }
+finally:
+	print(json.dumps(jobStatus))

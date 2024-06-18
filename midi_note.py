@@ -5,11 +5,13 @@
 # Author: Joseph Adams
 # Email: josephdadams@gmail.com
 # Date created: 7/15/2020
-# Date last modified: 4/19/2021
+# Date last modified: 6/17/2024
 
 import sys
 import json
 import requests
+
+jobStatus = {}
 
 try:
 	stdinput = sys.stdin.readline()
@@ -32,9 +34,17 @@ try:
 		"note": note,
 		"velocity": velocity
 	}
+
+	print('Sending midi-relay request to: ' + url)
+	print('Data: ' + str(jsonData))
 	
-	r = requests.post(url = url, json = jsonData)
-	
-	print('{ "complete": 1 }')
-except:
-	print('{ "complete": 1, "code": 999, "description": "Failed to execute." }')
+	try:
+		requests.post(url = url, json = jsonData, timeout=10)
+		jobStatus = { "complete": 1 }
+	except requests.exceptions.Timeout:
+		jobStatus = { "complete": 1, "code": 999, "description": "Request timed out." }
+except Exception as e:
+	print(e)
+	jobStatus = { "complete": 1, "code": 999, "description": "Failed to execute: " + str(e) }
+finally:
+	print(json.dumps(jobStatus))
