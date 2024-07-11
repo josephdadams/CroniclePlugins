@@ -196,6 +196,12 @@ Requires the following parameters:
 - `printorientation`: Menu: Items `Portrait`, `Landscape`
 - `printmargin`: Menu: Items `0.0in`, `0.25in`, `0.5in`, `0.75in`, `1.0in`
 
+## ping.py
+
+Performs a ping test to the hostname. If it pings succesfully, the job succeeds. If it can't ping, it fails.
+
+- `hostname`: Text Field: IP or host to ping
+
 ## rock_workflow.py
 
 Allows you to send data to a Rock RMS workflow via webhook. Specifically designed to use a workflow that sends texts/emails to a Rock Group in the event that a Cronicle job fails, or to simply send a notfication at a certain time.
