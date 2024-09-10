@@ -198,9 +198,15 @@ Requires the following parameters:
 
 ## ping.py
 
-Performs a ping test to the hostname. If it pings succesfully, the job succeeds. If it can't ping, it fails.
+Performs a ping test to the hostname.
 
 - `hostname`: Text Field: IP or host to ping
+- `scenario`: Menu: Items `Test`, `Success`, `Failure`
+- `timeout`: Text Field: Timeout in seconds so that it won't try to ping forever
+
+* For `Test`: If it pings succesfully, the job succeeds. If it can't ping, it fails.
+* For `Success`: It will ping the hostname until it succeeds (or hits the timeout). This lets you use the job with chaining, to only do something once it is online.
+* For `Failure`: Same as Success, but with fail. It will ping until it fails to respond (or hits the timeout). This lets you do something once the host has gone offline.
 
 ## rock_workflow.py
 
