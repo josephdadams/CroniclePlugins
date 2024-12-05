@@ -208,6 +208,13 @@ Performs a ping test to the hostname.
 * For `Success`: It will ping the hostname until it succeeds (or hits the timeout). This lets you use the job with chaining, to only do something once it is online.
 * For `Failure`: Same as Success, but with fail. It will ping until it fails to respond (or hits the timeout). This lets you do something once the host has gone offline.
 
+## pjlink.py
+
+Simple non-dependency script to turn a projector on/off. Does not support authentication.
+
+- `host`: Text Field: IP of Projector/Screen
+- `command`: Menu: Items `On`, `Off`
+
 ## rock_workflow.py
 
 Allows you to send data to a Rock RMS workflow via webhook. Specifically designed to use a workflow that sends texts/emails to a Rock Group in the event that a Cronicle job fails, or to simply send a notfication at a certain time.
