@@ -39,6 +39,15 @@ Requires the following parameters:
 - `ip`: Text Field: IP Address of the AJA Ki Pro
 - `transport_state`: Menu: Items `Playing Reverse`, `Reverse 2X`, `Forward 2X`, `Forward 4X`, `Forward 8X`, `Forward 16X`, `Stop`, `Paused`, `Recording`, `Idle`
 
+## ajakipro_deleteoldrecordings.py
+
+Deletes recordings on an AJA Ki Pro that are older than a specified number of days. Uses the Ki Pro `/clips` endpoint and evaluates each clip using its timestamp.
+Outputs each clip decision (DELETE / KEEP) to stdout for logging in Cronicle.
+Requires the following parameters:
+
+- `ip`: Text Field: IP Address of the AJA Ki Pro  
+- `days`: Text Field: Number of days to retain recordings (default: 14)  
+
 ## christie_lamphours.py
 
 Checks the lamp hours of the Christie projector. If the lamp hours are past the threshold, the job will fail and pass a message in the `chain_data` to be used in the next job.
