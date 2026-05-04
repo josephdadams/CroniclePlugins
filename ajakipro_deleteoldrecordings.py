@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 # File name: ajakipro_deleteoldrecordings.py
-# Version: 1.0.0
+# Version: 1.0.1
 # Author: Joseph Adams
 # Date created: 4/30/2026
 
@@ -78,7 +78,7 @@ try:
 	print("Summary: " + str(len(deleted)) + " deleted, " + str(len(kept)) + " kept, " + str(len(errors)) + " errors")
 
 	if len(matches) == 0:
-		print('{ "complete": 1, "code": 999, "description": "No clips found in Ki Pro response." }')
+		print('{ "complete": 1, "description": "No recordings found on Ki Pro: ' + ip + '" }')
 	elif len(errors) > 0:
 		print('{ "complete": 1, "code": 999, "description": "Some recordings failed to process.", "chain_data": { "message": "' + str(len(deleted)) + ' deleted, ' + str(len(errors)) + ' errors on Ki Pro: ' + ip + '" } }')
 	else:
