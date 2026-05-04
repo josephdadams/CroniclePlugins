@@ -246,6 +246,12 @@ Requires the following parameters:
 - `port`: Text Field: Port of the switcher (default of 7788)
 - `command`: RossTalk command to send (send multiple commands in the same string by separating them with semicolons `;`) For a list of RossTalk commands: http://help.rossvideo.com/carbonite-device/Topics/Protocol/RossTalk/CNT/RT-CNT-Comm.html
 
+## samsung_qet.py
+
+Allows you to turn a Samsung QET display on or off. This is a workflow-compatible plugin for Cronicle-Edge.
+
+Arguments: 'ip=10.40.80.72,power=on'
+
 ## Smartcast
 
 Allows you to control Vizio TVs with Smartcast.
