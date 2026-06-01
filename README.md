@@ -272,7 +272,7 @@ Allows you to send commands via the REST API to [spotify-controller](http://gith
 Requires the following parameters:
 
 - `ip`: Text Field: IP Address of the computer running spotify-controller
-- `command`: Menu: Items: (`Play`, `Play Track`, `Play Track In Context`, `Pause`, `Play Toggle`, `Next`, `Previous`, `Volume Up`, `Volume Down`, `Set Volume`, `Ramp Volume`, `Mute`, `Unmute`, `Repeat On`, `Repeat Off`, `Repeat Toggle`, `Shuffle On`, `Shuffle Off`, `Shuffle Toggle`
+- `command`: Menu: Items: `Play`, `Play Track`, `Play Track In Context`, `Pause`, `Play Toggle`, `Next`, `Previous`, `Volume Up`, `Volume Down`, `Set Volume`, `Ramp Volume`, `Mute`, `Unmute`, `Repeat On`, `Repeat Off`, `Repeat Toggle`, `Shuffle On`, `Shuffle Off`, `Shuffle Toggle`
 - `trackid`: Text Field: Track ID to play
 - `contextid`: Text Field: Context of Track ID
 -  `volume`: Text Field: Volume Level (0-100)
@@ -296,6 +296,7 @@ Requires the following parameters:
 - `port`: Hidden Field: TCP port (default should be "48631")
 - `controller`: Text Field: Controller Number / Input to adjust. Might need to be 0-based depending on your configuration.
 - `db`: Text Field: dB value to adjust to. The plugin uses this formula to calculate the Controller Position: Volume dB = -72 + 84\*(CONTROLLER POSITION/65535)
+- `mute`: Menu: Items: `Ignore`, `Mute`, `Unmute`
 
 ## timekeeper.py
 

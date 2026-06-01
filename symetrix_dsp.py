@@ -21,19 +21,39 @@ try:
 	controller = int(data['params']['controller'])
 	db = float(data['params']['db'])
 
-	#Volume dB = -72 + 84*(CONTROLLER POSITION/65535)
+	# check if mute parameter is provided, if not default to "ignore"
+	if 'mute' in data['params']:
+		mute = data['params']['mute']
+	else:
+		mute = "ignore"
+	mute = mute.lower() # ensure mute value is lowercase for comparison
+
+	# if mute is not a valid value, assume "ignore"
+	if mute not in ["ignore", "mute", "unmute"]:
+		mute = "ignore"
+
+	print('Controller/Input: ' + str(controller))	
 	
-	min = -72
-	max = 12
-
-	value = ((db - min) / 84) * 65535
-
-	value = int(value)
-
-	message = 'CS ' + str((controller)) + ' ' + str(value) + '\r\n'
-
-	print('Controller/Input: ' + str(controller))
-	print('dB Value: ' + str(db))
+	if mute == "ignore":
+		min = -72
+		max = 12
+		value = ((db - min) / 84) * 65535
+		value = int(value)
+		message = 'CS ' + str((controller)) + ' ' + str(value) + '\r\n'
+		print('dB Value: ' + str(db))
+	elif mute == "mute":
+		message = 'CS ' + str((controller)) + ' 65535\r\n'
+		value = 0
+		print('Mute: ON')
+	elif mute == "unmute":
+		message = 'CS ' + str((controller)) + ' 0\r\n'
+		value = 65535
+		print('Mute: OFF')
+	else:
+		print('Invalid mute parameter: ' + mute)
+		print('{ "complete": 1, "code": 998, "description": "Invalid mute parameter." }')
+		sys.exit(0)
+	
 	print('Controller Value: ' + str(value))
 	print('TCP Message:')
 	print(message)
