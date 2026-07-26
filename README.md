@@ -399,6 +399,18 @@ Requires the following parameters:
 	54 7
 	```
 
+## visionary_reboot.py
+
+Reboots a Visionary Solutions encoder or decoder using its `wapi.cgi` API endpoint.
+Requires the following parameters:
+
+- `ip`: Text Field: IP Address of the Visionary Solutions device
+- `username`: Text Field: Username for the device (default `admin`)
+- `password`: Text Field: Password for the device (default `admin`)
+- `timeout`: Text Field: HTTP timeout in seconds (default `10`)
+
+The job succeeds if the device responds with `API.STATUS=SUCCESS`; otherwise it fails and passes a message in the `chain_data` for the next job.
+
 ## vista.py
 
 Allows cues to be triggered on Chroma-Q/Jands Vista consoles, provided they are configured to respond to midi messages via [midi-relay](http;//github.com/josephdadams/midi-relay)
